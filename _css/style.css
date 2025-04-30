@@ -7,31 +7,38 @@
   
   body {
     font-family: 'Arial', sans-serif;
-    background-color: #ebf3ec;
+    background-color: rgb(254, 250, 241);
   }
   
   /* Header */
   .header {
     width: 100%;
+    height: 70px;
     background-color: rgba(244,237,221);
     border-bottom: 1px solid #ddd;
-    padding: 10px 20px;
-    position: sticky;
+    padding: 10px 40px;
     top: 0;
     z-index: 1000;
+    display: flex;
+    box-shadow: #333 0px 0px 4px;
+    position: sticky;
   }
   
   .header-container {
-    max-width: 1500px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
   
+  .header:hover {
+    visibility: visible;
+  }
+
   /* Logo */
   .logo img {
-    height: 100px;
+    height: 80px;
     cursor: pointer;
     margin: 0;
   }
@@ -48,7 +55,7 @@
     text-decoration: none;
     color: #294d2c;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 19px;
     transition: color 0.3s;
   }
   
@@ -66,6 +73,7 @@
   .header-icons {
     display: flex;
     gap: 20px;
+    align-items: center;
   }
   
   .header-icons a {
@@ -80,13 +88,14 @@
   }
   
   .banner img {
-    width: 1500px;
+    width: 98.5vw;
+    height: 75vh;
+    margin: 0;
   }
 
 .banner  {
   display: flex;
   justify-content: center;
-  padding-top: 20px;
 }
 
 .categories {
@@ -96,16 +105,42 @@
 
 .categories-titles {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
+  justify-content: center;
+  gap: 120px;
+  margin: 40px;
   text-align: center;
 }
 
 .categories-titles h2 {
   font-size: 20px;
   font-weight: 600;
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
+  position: relative;
+}
+
+.category {
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.2s ease-in-out;
+}
+
+.category::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.category:hover {
+  transform: scale(1.05);
+}
+
+.category.active::after {
+  background-color:rgb(153, 140, 111);
 }
 
 .categories-grid {
@@ -120,6 +155,12 @@
   padding: 15px;
   text-align: center;
   border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.category-item:hover {
+  transform: scale(1.05);
 }
 
 .category-img {
@@ -139,4 +180,20 @@
 .category-item p {
   font-size: 16px;
   color: #555;
+}
+
+footer {
+  background-color: rgb(31, 26, 21);
+  color: #f8f8f8;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.copy {
+  text-align: center;
+  margin-top: 20px;
 }
