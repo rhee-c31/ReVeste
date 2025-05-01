@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -46,7 +45,6 @@ body {
   font-weight: bold;
 }
 
-
 /* Navegação */
 .nav-links {
   display: flex;
@@ -91,133 +89,6 @@ a {
 .header-icons a:hover {
   color: #5dad62;
   transform: scale(1.05);
-}
-
-.botoes_entrar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* Desbuga o flex colum para nao ocupar a linha toda */
-  justify-content: center;
-  /* alinha no centro vertical (se quiser) */
-  gap: 12px;
-  padding: 20px;
-}
-
-.botoes_entrar button {
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding: 13px 35px;
-  border: 1px solid #294d2c;
-  border-radius: 8px;
-  background-color: white;
-  color: black;
-  font-size: 16px;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  transition: background-color 0.3s;
-}
-
-.botoes_entrar button:hover {
-  background-color: #f0f0f0;
-}
-
-.botoes_entrar i {
-  font-size: 20px;
-  color: #294d2c;
-}
-
-.fazer_login {
-  text-align: center;
-  font-size: 2.5rem;
-  color: #294d2c;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.separador {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  gap: 12px;
-  width: 100%;
-  max-width: 400px;
-  margin: 20px auto;
-  /* centraliza no container */
-}
-
-.separador hr {
-  flex: 1;
-  border: none;
-  border-top: 1px solid black;
-}
-
-.separador span {
-  font-size: 12px;
-  color: #294d2c;
-  font-weight: 500;
-}
-
-.inputs {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  width: 90%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-input::placeholder {
-  font-family: 'Montserrat', sans-serif;
-  color: #294d2c;
-  font-size: 15px;
-  opacity: 1;
-  /* garante que a cor fique visível */
-}
-
-
-.inputs input {
-  padding: 18px;
-  border: 1px solid #294d2c;
-  border-radius: 4px;
-  font-size: 15px;
-}
-
-.inputs a {
-  font-size: 14px;
-  color: #294d2c;
-  text-decoration: underline;
-  margin-top: 5px;
-  align-self: flex-start;
-}
-
-.botao_fazer_login {
-  margin: 20px auto;
-  width: 90%;
-  max-width: 400px;
-}
-
-.botao_fazer_login button {
-  width: 100%;
-  padding: 14px;
-  background-color: #294d2c;
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.criar-conta {
-  display: block;
-  text-align: center;
-  margin-top: 10px;
-  font-size: 14px;
-  color: #294d2c;
-  text-decoration: underline;
 }
 
 footer {
@@ -273,7 +144,6 @@ footer li {
   margin-top: 20px;
 }
 
-
 .footer-container2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -297,4 +167,47 @@ footer li {
   grid-column: span 2 / span 2;
   grid-row: span 2 / span 2;
   grid-column-start: 5;
+}
+
+.main-container {
+  display: flex;
+  height: 75vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.left-container {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  padding-left: 95px;
+  gap: 15px;
+}
+
+.left-container h1 {
+  color: #8c7851;
+  font-family: poppins, sans-serif;
+  font-size: 37px;
+  justify-content: left;
+}
+
+.left-container p {
+  color: #101010;
+  font-size: 16px;
+  justify-content: left;
+}
+
+.right-container {
+  width: 50vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-container img {
+  width: 25vw;
 }

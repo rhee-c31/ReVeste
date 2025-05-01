@@ -7,4 +7,3 @@ category.addEventListener("click", () => {
     category.classList.add("active");
     });
   });
-
