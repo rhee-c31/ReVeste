@@ -265,7 +265,8 @@ a {
 
 .grid_produtos_linha1 {
   display: flex;
-  gap: rem;
+  gap: 2rem;
+  margin: 20px;
 }
 
 /* Definindo a animação */
